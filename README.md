@@ -105,7 +105,6 @@ final_prediction = (
 
 ---
 
-## ✅ Final Notes
-
-This solution balances performance and generalization by combining tree-based models, domain-specific feature engineering, and external remote sensing data.  
-The methodology is flexible and can be extended to other geographies facing similar challenges in soil nutrient estimation.
+## ✅ Future works
+- Tune hyperparameters and apply tailored feature engineering for each nutrient-specific model.
+- Build an interpretable model to gain insights into which features contribute most to each nutrient prediction.
