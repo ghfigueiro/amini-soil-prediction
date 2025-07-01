@@ -15,9 +15,23 @@ To achieve this goal, I aimed to develop a model that generalizes soil nutrient 
 
 ### ➕ New Features (suggested by GPT-4o by OpenAI):
 
-- Fertility Index  
-- SOC Bulk Density  
-- Aridity Index
+- Fertility Index
+ ```python
+    # Normalize key soil indicators (CEC, pH, and SOC) using z-score normalization
+    df['cec20_norm'] = (df['cec20'] - df['cec20'].mean()) / df['cec20'].std()
+    df['ph20_norm'] = (df['ph20'] - df['ph20'].mean()) / df['ph20'].std()
+    df['soc20_norm'] = (df['soc20'] - df['soc20'].mean()) / df['soc20'].std()
+    
+    # Create combined fertility index from normalized features
+    df['fertility_index'] = df['cec20_norm'] + df['ph20_norm'] + df['soc20_norm']
+- SOC Bulk Density
+```python
+    # Calculate SOC to Bulk Density ratio (important for soil quality assessment)
+    df['SOC_BulkDensity'] = df['soc20'] / df['BulkDensity']
+ - Aridity Index
+```python
+    # Calculate aridity index from climate variables (precipitation/temperature)
+    df['aridity_index'] = df['bio12'] / df['bio1']
 
 ### 📂 External Datasets Used:
 
