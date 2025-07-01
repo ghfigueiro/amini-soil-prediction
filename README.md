@@ -38,8 +38,8 @@ df['aridity_index'] = df['bio12'] / df['bio1']
 
 ---
 
-### 📂 External Datasets Used
-
+### 📂 Datasets Used
+- `Train.csv`  
 - `LANDSAT8_data_updated.csv`  
 - `MODIS_MOD16A2_data.csv`  
 - `MODIS_MOD11A1_data.csv`  
